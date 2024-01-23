@@ -9,7 +9,6 @@ endif
 
 " Theme
 syntax enable
-colorscheme OceanicNext
 
 " Lines
 set relativenumber
