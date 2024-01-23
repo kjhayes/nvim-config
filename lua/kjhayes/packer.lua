@@ -3,6 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
+    use 'mhartington/oceanic-next'
         use {
             "hrsh7th/nvim-cmp",
             requires = {

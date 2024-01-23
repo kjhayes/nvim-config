@@ -1,21 +1,18 @@
+
 require("kjhayes.packer")
 require("kjhayes.remap")
 
-vim.cmd([[
+if vim.fn.has("termguicolors")
+then
+  vim.cmd.set("termguicolors")
+end
 
-if (has("termguicolors"))
- set termguicolors
-endif
+vim.cmd.set("relativenumber")
 
-" Theme
-syntax enable
+vim.cmd.set("expandtab")
+vim.cmd.set("tabstop=4")
+vim.cmd.set("shiftwidth=4")
 
-" Lines
-set relativenumber
+vim.cmd.syntax("enable")
+vim.cmd.colorscheme("OceanicNext")
 
-" Tabs
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-
-]]);
