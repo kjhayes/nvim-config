@@ -8,4 +8,33 @@ return {
     'saadparwaiz1/cmp_luasnip',     -- for autocompletion
     'rafamadriz/friendly-snippets', -- useful snippets
   },
+  
+  config = function()
+    local cmp = require('cmp')
+
+    local luasnip = require('luasnip')
+
+    cmp.setup {
+      completion = {
+        completeopt = "menu,menuone,insert"
+      },
+
+      experimental = {
+        ghost_text = true
+      },
+
+      snippet = {
+        expand = function(args)
+          luasnip.lsp_expand(args.body)
+        end
+      },
+
+      sources = cmp.config.sources {
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
+        { name = "buffer" },
+        { name = "path" }
+      }
+    }
+  end
 }
