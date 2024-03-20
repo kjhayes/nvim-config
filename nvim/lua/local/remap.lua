@@ -3,7 +3,8 @@
 -- (         I want someone who can use standard vim to be able to use my laptop without issue)
 
 -- Alternative to <esc>
-vim.keymap.set({"n","t","i","v"}, "<A-;>", "<esc>")
+vim.keymap.set({"n","i","v"}, "<A-;>", "<esc>")
+vim.keymap.set("t", "<A-;>", "<C-\\><C-n>")
 
 -- Alternative to <C-d> and <C-u>
 vim.keymap.set("n", "<A-j>", "<C-d>")

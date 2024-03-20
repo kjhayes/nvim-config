@@ -1,8 +1,13 @@
 return {
-    { 
+    {
         'mhartington/oceanic-next',
         config = function()
-            vim.cmd.colorscheme("OceanicNext")
+        end
+    },
+    {
+        'fcpg/vim-fahrenheit',
+        config = function()
+            vim.cmd.colorscheme("fahrenheit")
         end
     },
 }
