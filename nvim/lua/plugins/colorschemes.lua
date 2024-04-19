@@ -10,4 +10,5 @@ return {
             vim.cmd.colorscheme("fahrenheit")
         end
     },
+    { "miikanissi/modus-themes.nvim"},
 }
